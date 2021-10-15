@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JsonLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:JsonLibrary.Classes.Helpers">
+            <summary>
+            Provides serializing operation methods
+            </summary>
+        </member>
+        <member name="M:JsonLibrary.Classes.Helpers.ModelListToJson``1(System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            Convert &lt;see cref="TModel"/&gt; to json file
+            </summary>
+            <typeparam name="TModel">type to serialize</typeparam>
+            <param name="list">List of TModel</param>
+            <param name="fileName">Save to file</param>
+            <returns><see cref="T:System.ValueTuple"/> of bool for success, <see cref="T:System.Exception"/> if a runtime exception is thrown</returns>
+        </member>
+        <member name="M:JsonLibrary.Classes.Helpers.ModelToJson``1(``0,System.String)">
+            <summary>
+            Saves TModel to a file
+            </summary>
+            <typeparam name="TModel">type to serialize</typeparam>
+            <param name="list">List of TModel</param>
+            <param name="fileName">Save to file</param>
+            <returns></returns>
+        </member>
+        <member name="M:JsonLibrary.Classes.Helpers.JsonToModel``1(System.String)">
+            <summary>
+            Read file, convert to TModel/>
+            </summary>
+            <typeparam name="TModel">type to deserialize</typeparam>
+            <param name="fileName">Read from file</param>
+            <returns></returns>
+        </member>
+        <member name="M:JsonLibrary.Classes.Helpers.JsonToListModel``1(System.String)">
+            <summary>
+            List of T from file
+            </summary>
+            <typeparam name="T">Type to deserialize</typeparam>
+            <param name="fileName">Read from file</param>
+            <returns><see cref="T:System.ValueTuple"/> of list and <see cref="T:System.Exception"/></returns>
+        </member>
+        <member name="T:JsonLibrary.Classes.LanguageCodes">
+            <summary>
+            LanguageCodes auto generated enumeration by Karen Payne
+            These values are read from a database table so if new codes
+            are added the process is to run the generator again. Once
+            the generator is done copy the results into this file replacing
+            the current content, that's it.
+            </summary>
+            <remarks>
+            See the following GitHub project for the generator
+            https://github.com/karenpayneoregon/EntityFrameworkEnum/tree/master/EnumGeneratorLibrary
+            
+            </remarks>
+        </member>
+        <member name="F:JsonLibrary.Classes.LanguageCodes.English">
+            <summary>
+            English 
+            </summary>
+        </member>
+        <member name="F:JsonLibrary.Classes.LanguageCodes.Spanish">
+            <summary>
+            Spanish 
+            </summary>
+        </member>
+        <member name="T:JsonLibrary.Classes.NewtonSettings">
+            <summary>
+            Setting for serializing with Json.net
+            </summary>
+        </member>
+        <member name="M:JsonLibrary.Classes.NewtonSettings.SettingsIgnoreReferenceLooping">
+            <summary>
+            Format indent
+            Prevent Self referencing loop detected
+            </summary>
+        </member>
+        <member name="M:JsonLibrary.Classes.NewtonSettings.SettingsDefault">
+            <summary>
+            Format indent
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

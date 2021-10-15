@@ -1,0 +1,246 @@
+{
+	
+	// Place your snippets for cfml here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"Dump rc": {
+		"prefix": "drc",
+		"body": [
+		  "<cfdump var=\"#rc#\">"
+		],
+		"description": "Dump rc"
+	  },
+	  "Mobile claims query starter": {
+		"prefix": "mcquery",
+		"body": [
+		  "<cfquery name=\"${1:insert query name}\" datasource=\"#variables.dsn#\">",
+		  "    ${2:insert sql here}",
+		  "</cfquery>"
+		],
+		"description": "Mobile claims query starter"
+	  },
+	  "document ready empty": {
+		"prefix": "dre",
+		"body": [
+		  "<script>",
+		  "    $(document).ready(function() {",
+		  "      ${1:place code here}",
+		  "    });",
+		  "</script>"
+		],
+		"description": "document ready empty"
+	  },
+	  "bootbox confirm template": {
+		"prefix": "bootc",
+		"body": [
+		  "$('#${1:place id here}').click(function (event) {",
+		  "    bootbox.confirm(",
+		  "        {",
+		  "            size: 'small',",
+		  "            message: 'Are you sure?',",
+		  "            callback: function (result) {",
+		  "                if (result === true) {",
+		  "                    bootbox.alert('Proceed');",
+		  "                } else {",
+		  "                    bootbox.alert('Cancelled operation');",
+		  "                }",
+		  "            }",
+		  "        });",
+		  "})"
+		],
+		"description": "bootbox confirm template"
+	  },
+	  "clientSettings class": {
+		"prefix": "csc",
+		"body": [
+		  "var $clientSettings = $clientSettings || {};",
+		  "$clientSettings = function () {",
+		  "    var language;",
+		  "",
+		  "    var init = function (e) {",
+		  "        if (e === \"\") {",
+		  "            language = 'E';",
+		  "        } else {",
+		  "            language = e.toUpperCase() === 'E' ? 'E' : 'S';",
+		  "        }",
+		  "    };",
+		  "",
+		  "    this.getCurrentLanguage = function () {",
+		  "        return language;",
+		  "    };",
+		  "",
+		  "    this.isEnglish = function () {",
+		  "        return getCurrentLanguage() === 'E';",
+		  "    };",
+		  "",
+		  "    this.isSpanish = function () {",
+		  "        return getCurrentLanguage() === 'S';",
+		  "    };",
+		  "",
+		  "",
+		  "    return {",
+		  "        init: init,",
+		  "        isEnglish: isEnglish,",
+		  "        isSpanish: isSpanish,",
+		  "        getCurrentLanguage: getCurrentLanguage",
+		  "    };",
+		  "}();"
+		],
+		"description": "clientSettings class"
+	  }	  ,
+	  "insert comment with date": {
+		"prefix": "insdate",
+		"body": ["<!--- $CURRENT_MONTH/$CURRENT_DATE/$CURRENT_YEAR ${1:author} ${2:text} --->"],
+		"description": "comment with datestamp"
+	  },
+	  "h1": {
+		"prefix": "h1",
+		"body": [
+		  "<h1>${1:}</h1>"
+		],
+		"description": "h1"
+	  },
+	  "h2": {
+		"prefix": "h2",
+		"body": [
+		  "<h2>${1:}</h2>"
+		],
+		"description": "h2"
+	  },
+	  "h3": {
+		"prefix": "h3",
+		"body": [
+		  "<h3>${1:}</h3>"
+		],
+		"description": "h3"
+	  },	  
+	  "p": {
+		"prefix": "p",
+		"body": [
+		  "<p>${1:}</p>"
+		],
+		"description": "p"
+	  },
+	  "div tag": {
+		"prefix": "div",
+		"body": [
+		  "<div id=\"${identifier}\">${contents:}</div>"
+		],
+		"description": "div tag"
+	   },"divcf": {
+		"prefix": "divcf",
+		"body": [
+		  "<div class='container-fluid'>",
+		  "    ${1:}",
+		  "</div>"
+		],
+		"description": "div container-fluid"
+	  },
+	  "style tag": {
+		"prefix": "style",
+		"body": [
+		  "<style>",
+		  "    ${1:}",
+		  "</style>"
+		],
+		"description": "style tag"
+	  },
+	  "strong": {
+		"prefix": "strong",
+		"body": [
+		  "<strong>${1:}</strong>"
+		],
+		"description": "bold current"
+	  },
+	  "b": {
+		"prefix": "b",
+		"body": [
+		  "<b>${1:}</b>"
+		],
+		"description": "bold old"
+	  },
+	  "emphasized": {
+		"prefix": "emp",
+		"body": [
+		  "<em>${1:}</em>"
+		],
+		"description": "emphasized"
+	  },	  
+	  "span": {
+		"prefix": "span",
+		"body": [
+		  "<span>${1:}</span>"
+		],
+		"description": "span"
+	  },"click event": {
+		"prefix": "click",
+		"body": [
+		  "$('#${1:id}').click(function (event) {",
+		  "    ${2:code}",
+		  "});"
+		],
+		"description": "click event"
+	  },
+	  "btn-primary": {
+		"prefix": "btnp",
+		"body": [
+		  "<button id=\"${1:id}\" class=\"btn btn-primary\">${2:text}</button>"
+		],
+		"description": "btn-primary"
+	  },
+	  "comment": {
+		"prefix": "comment",
+		"body": [
+		  "<!--- --->"
+		],
+		"description": "comment"
+	  },  
+	  "Output JavaScript value": {
+        "prefix": "out",
+        "body": [
+            "console.log(${value});"
+        ],
+        "description": "JS Outputs a value to the screen."
+	},
+	"whats up": {
+		"prefix": "wu",
+		"body": [
+		  "<p>¯\\_(ツ)_/¯</p>"
+		],
+		"description": "whats up"
+	  },	  
+		"Print to console": {
+		   // provides multiple choice 
+		  "prefix": "csl",
+		  "body": ["console.${1|log,info,warn,err|}($2)", "$0"],
+		  "description": "Logs something to the console"
+	},
+	"js named function": {
+		"prefix": "nfn",	
+		"body": [
+		"function ${1:functionName}($2){",		
+		"$3",		
+		"}"		
+		],		
+		"description": "named function"		
+	},
+	"a href": {
+		"prefix": "ah",
+		"body": [
+			"<a href='${1:link}'>${2:text for link}</a>"
+		],
+		"description": "a href"
+	}
+	  
+}

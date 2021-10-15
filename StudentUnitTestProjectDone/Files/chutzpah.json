@@ -1,0 +1,26 @@
+﻿{
+    "Framework": "qunit",
+    "References": [
+        { "Path": "../Scripts/sinon-1.17.2.js" },
+        { "Path": "../Scripts/mockAjaxCommon.js" },
+        { "Path": "../Scripts/mockjax-test-data.js" },
+        { "Path": "../Scripts/jquery-1.10.2.js" },
+        { "Path": "../Scripts/kendo.all.js" },
+        {
+            "Path": "../js",
+            "Include": "*.js",
+            "Excludes": [
+                "*adal.js",
+                "*app.js",
+                "*demo.js"
+            ]
+        }
+    ],
+    "Tests": [
+        {
+            "Path": "js",
+            "Include": "*.js",
+            "Exclude": "*demo*"
+        }
+    ]
+}

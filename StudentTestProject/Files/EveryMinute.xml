@@ -1,0 +1,39 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+EveryMinute
+</name>
+</assembly>
+<members>
+<member name="T:EveryMinute.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:EveryMinute.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:EveryMinute.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:EveryMinute.Classes.CountDownTimer.#ctor(System.Int32,System.Int32)">
+ <summary>
+ Setup with minutes and seconds
+ </summary>
+ <param name="minutes"></param>
+ <param name="seconds"></param>
+</member>
+<member name="M:EveryMinute.Classes.CountDownTimer.#ctor(System.TimeSpan)">
+ <summary>
+ Setup with TimeSpan
+ </summary>
+ <param name="ts"><see cref="T:System.TimeSpan"/></param>
+</member>
+</members>
+</doc>
